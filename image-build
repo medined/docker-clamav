@@ -1,0 +1,3 @@
+export CLAMAV_TS=$(date "+%Y-%m-%d")
+docker build -t frog/clamav:$CLAMAV_TS .
+docker tag frog/clamav:$CLAMAV_TS frog/clamav:latest

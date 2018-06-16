@@ -1,0 +1,2 @@
+export CLAMAV_TS=$(date "+%Y-%m-%d")
+docker save frog/clamav:${CLAMAV_TS} | gzip > frog-clamav-${CLAMAV_TS}.docker.save.tgz

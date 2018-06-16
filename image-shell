@@ -1,0 +1,7 @@
+docker run \
+  -it \
+  --rm \
+  --name clamav \
+  -p 3310:3310 \
+  frog/clamav:latest \
+  bash
