@@ -43,7 +43,7 @@ docker save frog/clamav:${CLAMAV_TS} | gzip > frog-clamav-${CLAMAV_TS}.docker.sa
 
 ```
 export CLAMAV_TS=$(date "+%Y-%m-%d")
-gunzip -c frog-clamav-$CLAMAV_TS.docker.save.tgz | docker load
+gunzip -c frog-clamav-${CLAMAV_TS}.docker.save.tgz | docker load
 ```
 
 ## Miscellany
