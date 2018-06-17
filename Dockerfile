@@ -22,8 +22,9 @@ RUN cp /usr/share/clamav/template/clamd.conf /etc/clamd.conf \
  && sed -i '/^Example/d' /etc/clamd.conf \
  && sed -i '/^User/d' /etc/clamd.conf \
  && sed -i 's/^#TCPSocket 3310/TCPSocket 3310/' /etc/clamd.conf \
- && sed -i 's/^#LogFile/LogFile/' /etc/clamd.conf \
+ && sed -i 's/^#LogFile .*$/LogFile \/tmp\/clamd.log/' /etc/clamd.conf \
  && sed -i 's/^#LogTime/LogTime/' /etc/clamd.conf \
+ && sed -i 's/^#LogVerbose yes/LogVerbose yes/' /etc/clamd.conf \
  && sed -i 's/^#StreamMaxLength 10M/StreamMaxLength 50M/' /etc/clamd.conf \
  && sed -i 's/^#Foreground yes$/Foreground yes/g' /etc/clamd.conf
 
